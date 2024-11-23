@@ -74,7 +74,7 @@ const login = async (req, res) => {
   const loggedInUser = await User.findById(user._id);
   const options = {
     httpOnly: true,
-    secure: true,
+    secure: false,
     sameSite: "strict",
   };
   res
@@ -110,7 +110,7 @@ const regenerateAccessToken = async (req, res) => {
     );
     const options = {
       httpOnly: true,
-      secure: true,
+      secure: false,
       sameSite: "Strict",
     };
 
@@ -130,7 +130,7 @@ const logOut = async (req, res) => {
     await User.findByIdAndUpdate(userId, { refreshToken: null });
     const options = {
       httpOnly: true,
-      secure: true,
+      secure: false,
       sameSite: "strict",
     };
     return res
