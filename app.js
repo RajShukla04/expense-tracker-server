@@ -4,7 +4,7 @@ import cookieParser from "cookie-parser";
 const app = express();
 app.use(
   cors({
-    origin: "https://expense-tracker-server-production-0ed9.up.railway.app",
+    origin: "https://expense-tracker-frontend-iota-beige.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
