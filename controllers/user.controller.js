@@ -57,6 +57,7 @@ const data = async (req, res) => {
   res.status(200).json({ deta: deta });
 };
 const login = async (req, res) => {
+  console.log("cookies: ", req.cookies);
   let accessed = false;
   const { email, password } = req.body;
   if (!email || !password) {
